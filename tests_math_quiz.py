@@ -1,30 +1,21 @@
 import unittest
-from math_quiz import function_A, function_B, function_C
+from math_quiz import new_function_A, new_function_B, new_function_C
 
 
-class TestMathGame(unittest.TestCase):
+class TestMathQuizFunctions(unittest.TestCase):
 
-    def test_function_A(self):
-        # Test if random numbers generated are within the specified range
-        min_val = 1
-        max_val = 10
-        for _ in range(1000):  # Test a large number of random values
-            rand_num = function_A(min_val, max_val)
-            self.assertTrue(min_val <= rand_num <= max_val)
+    def test_new_function_A(self):
+        result = new_function_A(2, 3)
+        self.assertEqual(result, 5, "Error: new_function_A did not return the expected result.")
 
-    def test_function_B(self):
-        # TODO
-        pass
+    def test_new_function_B(self):
+        result = new_function_B(4, 2)
+        self.assertEqual(result, 8, "Error: new_function_B did not return the expected result.")
 
-    def test_function_C(self):
-            test_cases = [
-                (5, 2, '+', '5 + 2', 7),
-                ''' TODO add more test cases here '''
-            ]
+    def test_new_function_C(self):
+        result = new_function_C(5, 2)
+        self.assertEqual(result, 10, "Error: new_function_C did not return the expected result.")
 
-            for num1, num2, operator, expected_problem, expected_answer in test_cases:
-                # TODO
-                pass
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
